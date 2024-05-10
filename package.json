@@ -9,7 +9,7 @@
   "author": "Xmader",
   "scripts": {
     "start": "http-server . -p 8082 -c-1",
-    "build": "parcel build index.js --public-url ./"
+    "build": "parcel build index.html --public-url ./"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
