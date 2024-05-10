@@ -1,4 +1,4 @@
-name: Build Mobile Apps
+name: Build Android Apps
 
 on:
   # Runs on pushes targeting the default branch
@@ -47,7 +47,7 @@ jobs:
     - name: Prepare artifacts directory
       run: |
         mkdir -p artifacts/android-app
-        cp cordova/platforms/android/app/build/outputs/apk/release/app-release.apk artifacts/android-app/Rubao-${{ github.ref_name }}.apk
+        cp cordova/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk artifacts/android-app/Rubao-${{ github.ref_name }}.apk
 
     - name: Upload APK
       uses: actions/upload-artifact@v2
